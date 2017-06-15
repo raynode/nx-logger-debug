@@ -1,6 +1,9 @@
 {
   "author": "Tobias Kopelke <nox@raynode.de>",
-  "dependencies": {},
+  "dependencies": {
+    "debug": "^2.6.8",
+    "nx-logger": "^1.0.7"
+  },
   "description": "",
   "devDependencies": {
     "@types/node": "^7.0.31",
