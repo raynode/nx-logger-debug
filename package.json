@@ -2,12 +2,13 @@
   "author": "Tobias Kopelke <nox@raynode.de>",
   "dependencies": {
     "debug": "^2.6.8",
-    "nx-logger": "^1.0.7"
+    "nx-logger": "^1.0.9"
   },
   "description": "",
   "devDependencies": {
+    "@types/debug": "0.0.29",
     "@types/node": "^7.0.31",
-    "typescript": "^2.3.4"
+    "typescript": "^2.4.0"
   },
   "files": [
     "dist/*"
@@ -27,6 +28,7 @@
     "build": "tsc",
     "prepare": "npm run build",
     "preupload": "npm version patch",
+    "postupload": "git push",
     "test": "echo \"Error: no test specified\" && exit 1",
     "upload": "npm publish"
   },

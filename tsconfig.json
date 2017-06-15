@@ -20,7 +20,7 @@
     ]
   },
   "files": [
-    "lib/log.ts"
+    "lib/log-debug.ts"
   ],
   "exclude": [
     "node_modules"
