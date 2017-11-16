@@ -9,7 +9,15 @@
   "description": "",
   "devDependencies": {
     "@types/debug": "0.0.29",
-    "@types/node": "^7.0.31",
+    "@types/node": "^8.0.53",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "faker": "^4.1.0",
+    "jest": "^21.2.1",
+    "semantic-release": "^8.2.0",
+    "sinon": "^4.1.2",
+    "ts-jest": "^21.2.2",
+    "ts-node": "^3.0.6",
     "typescript": "^2.4.0"
   },
   "files": [
@@ -40,7 +48,7 @@
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
-  "types": "dist/log.d.ts",
+  "types": "dist/log-debug.d.ts",
   "version": "0.0.0-development",
   "release": {
     "verifyRelease": {
