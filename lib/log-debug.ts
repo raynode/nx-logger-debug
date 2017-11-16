@@ -1,6 +1,6 @@
 
 import * as debug from 'debug'
-import * as nxLogger from 'nx-logger'
+import * as nxLogger from '@raynode/nx-logger'
 
 export const transport: nxLogger.nxLogger.TransportFn =
   (configuration, [formatter, ...args]) =>

@@ -1,8 +1,10 @@
 {
   "author": "Tobias Kopelke <nox@raynode.de>",
   "dependencies": {
-    "debug": "^2.6.8",
-    "nx-logger": "^1.0.9"
+    "debug": "^2.6.8"
+  },
+  "peerDependencies": {
+    "@raynode/nx-logger": "0.0.0"
   },
   "description": "",
   "devDependencies": {
@@ -19,19 +21,34 @@
   ],
   "license": "ISC",
   "main": "dist/log-debug.js",
-  "name": "nx-logger-debug",
+  "name": "@raynode/nx-logger-debug",
   "repository": {
     "type": "git",
     "url": "https://github.com/raynode/nx-logger-debug"
   },
   "scripts": {
-    "build": "tsc",
-    "prepare": "npm run build",
-    "preupload": "npm version patch",
-    "postupload": "git push",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "upload": "npm publish"
+    "commit": "git-cz",
+    "lint": "tslint 'lib/**/*.ts'",
+    "lint:fix": "tslint --fix 'lib/**/*.ts'",
+    "build": "rm -rf dist && tsc -p tsconfig.release.json",
+    "test": "npm run test-only",
+    "test-only": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
-  "types": "./types.d.ts",
-  "version": "1.0.9"
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "types": "dist/log.d.ts",
+  "version": "0.0.0-development",
+  "release": {
+    "verifyRelease": {
+      "path": "cracks",
+      "paths": [
+        "__tests__",
+        "package.json"
+      ]
+    }
+  }
 }
