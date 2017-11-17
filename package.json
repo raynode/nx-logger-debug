@@ -1,14 +1,14 @@
 {
   "author": "Tobias Kopelke <nox@raynode.de>",
   "dependencies": {
-    "debug": "^2.6.8"
+    "debug": "^3.1.0"
   },
   "peerDependencies": {
     "@raynode/nx-logger": "0.0.0"
   },
   "description": "",
   "devDependencies": {
-    "@types/debug": "0.0.29",
+    "@types/debug": "0.0.30",
     "@types/node": "^8.0.53",
     "commitizen": "^2.9.6",
     "cracks": "^3.1.2",
