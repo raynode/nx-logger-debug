@@ -9,6 +9,7 @@
   "description": "",
   "devDependencies": {
     "@types/debug": "0.0.30",
+    "@types/faker": "^4.1.2",
     "@types/node": "^9.3.0",
     "commitizen": "^2.9.6",
     "cracks": "^3.1.2",
@@ -60,5 +61,8 @@
         "package.json"
       ]
     }
+  },
+  "optionalDependencies": {
+    "@raynode/nx-logger": "^1.0.0"
   }
 }
