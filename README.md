@@ -1,13 +1,15 @@
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
-[![tested with jest][jest-badge]][jest]
-[![build with travis-ci][travis-badge]][travis]
 [![semantic-release][semantic-release-badge]][semantic-release]
 [![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
+[![build with travis-ci][travis-badge]][travis]
+[![tested with jest][jest-badge]][jest]
+[![Coverage Status](https://coveralls.io/repos/github/raynode/nx-logger-debug/badge.svg?branch=master)](https://coveralls.io/github/raynode/nx-logger-debug?branch=master)
+[![npm version](https://badge.fury.io/js/%40raynode%2Fnx-logger-debug.svg)](https://badge.fury.io/js/%40raynode%2Fnx-logger-debug)
 
 # nx-logger-debug
 
-This is a graphql server-ish module that enables you to run a graphql resolver anywhere. This is thought to be used in the browser as a first step to integrating graphql later in the production cycle.
+nx-logger-debug is a transport for [nx-logger](https://github.com/raynode/nx-logger)
 
 + [TypeScript][typescript] [2.5][typescript-25] to ES6 transpilation
 + [TSLint][tslint] 5.x
@@ -26,13 +28,16 @@ npm i @raynode/nx-logger-debug
 ## Usage
 
 ```
-import { createServer } from 'nx-logger-debug'
+import { transport } from 'nx-logger-debug'
+import { create, configure } from 'nx-logger'
 
-const { client } = createServer({ typeDefs, resolver })
+configure({ transport })
+const logger = create('my-logger')
+
 ```
 
 ```
-import { queryRequestFactory, queryFactory, createClient, createServer } from 'nx-logger-debug'
+logger('Test') // equals to debug('my-logger')('Test') => my-logger: Test +5ms
 ```
 
 
