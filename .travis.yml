@@ -8,10 +8,10 @@ node_js:
   - '8'
 before_script:
   - npm install --no-save @raynode/nx-logger
-  - npm run test
   - npm run build
   - npm prune
 after_success:
+  - npm run coveralls
   - npm run semantic-release
 branches:
   except:
