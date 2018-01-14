@@ -56,10 +56,10 @@
   "types": "dist/log-debug.d.ts",
   "version": "1.0.0",
   "release": {
-    "verifyRelease": {
-      "path": "cracks",
-      "paths": [
-        "package.json"
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [
+        {"type": "chore", "release": "patch"}
       ]
     }
   },
