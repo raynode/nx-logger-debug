@@ -4,25 +4,25 @@
     "debug": "^3.1.0"
   },
   "peerDependencies": {
-    "@raynode/nx-logger": "^1.1.2"
+    "@raynode/nx-logger": ">=1.1.2"
   },
   "description": "",
   "devDependencies": {
     "@types/debug": "0.0.30",
     "@types/faker": "^4.1.2",
-    "@types/node": "^9.3.0",
+    "@types/node": "^9.4.1",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
     "cracks": "^3.1.2",
     "cz-conventional-changelog": "^2.1.0",
     "faker": "^4.1.0",
-    "jest": "^22.0.6",
-    "jest-cli": "^22.0.6",
-    "semantic-release": "^12.2.2",
-    "sinon": "^4.1.4",
-    "ts-jest": "^22.0.1",
+    "jest": "^22.2.0",
+    "jest-cli": "^22.2.0",
+    "semantic-release": "^12.4.1",
+    "sinon": "^4.2.2",
+    "ts-jest": "^22.0.3",
     "ts-node": "^4.1.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.7.1"
   },
   "files": [
     "dist/*"
@@ -65,7 +65,7 @@
     }
   },
   "optionalDependencies": {
-    "@raynode/nx-logger": "^1.1.2"
+    "@raynode/nx-logger": "^2.0.0"
   },
   "config": {
     "commitizen": {
