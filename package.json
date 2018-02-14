@@ -65,7 +65,7 @@
     }
   },
   "optionalDependencies": {
-    "@raynode/nx-logger": "^2.0.0"
+    "@raynode/nx-logger": "^3.0.0"
   },
   "config": {
     "commitizen": {
