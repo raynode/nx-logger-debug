@@ -5,14 +5,13 @@ module.exports = {
   },
   clearMocks: true,
   bail: true,
-  mapCoverage: true,
   modulePaths: [
-    "src",
-    "node_modules"
+    'src',
+    'node_modules'
   ],
   moduleDirectories: [
-    "node_modules",
-    "<rootDir>/src"
+    'node_modules',
+    '<rootDir>/src'
   ],
   moduleFileExtensions: [
     'ts',
@@ -20,7 +19,6 @@ module.exports = {
     'js',
     'jsx'
   ],
-  // setupFiles: [ "<rootDir>/mocks/index.ts" ],
   testRegex: '/lib/.*\.spec\.[tj]sx?$',
   coverageDirectory: 'coverage',
   collectCoverageFrom: [

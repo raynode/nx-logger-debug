@@ -26,9 +26,12 @@
       "check-type",
       "check-typecast",
       "check-preblock"
-    ]
-  },
-  "rulesDirectory": [
-    "src"
-  ]
+    ],
+    // comma rules
+    "trailing-comma": [true, {
+      "typeLiterals": "ignore",
+      "multiline": "always",
+      "singleline": "never"
+    }]
+  }
 }
