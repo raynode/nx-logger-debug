@@ -1,7 +1,7 @@
 
 import * as faker from 'faker'
 
-import { configure, create } from '@raynode/nx-logger'
+import { configure, create, nxLogger } from '@raynode/nx-logger'
 
 import * as debug from './__mocks__/debug'
 import { transport } from './log-debug'
@@ -10,42 +10,37 @@ const { setMockHandler } = debug
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 50
 
-describe('nx-logger-debug with tty', () => {
-  beforeEach(() => configure({ transport, tty: true }))
-
-  it('should call debug with the given parameters', () => {
+describe('nx-logger-debug', () => {
+  const sendMessageWithSettings = (
+    loggerOptions: Partial<nxLogger.Config>,
+    message = faker.random.word(),
+    namespace = [faker.random.word(), faker.random.word()],
+  ) => {
+    configure({ ...loggerOptions, transport })
     const inNs = [faker.random.word(), faker.random.word()]
     const inMsg = faker.random.word()
-    const log = create(...inNs)
+    const log = create(...namespace)
     let called = false
     setMockHandler(ns => {
       return (formatter: any, ...args: any[]) => {
-        expect(ns).toEqual(inNs.join(':'))
-        expect(formatter).toEqual(inMsg)
+        expect(ns).toEqual(namespace.join(':'))
+        expect(formatter).toEqual(message)
         called = true
       }
     })
-    log(inMsg)
-    expect(called).toBeTruthy()
+    log(message)
+    return called
+  }
+
+  describe('nx-logger-debug with tty', () => {
+    it('should call debug with the given parameters', () => {
+      expect(sendMessageWithSettings({ tty: true })).toBeTruthy()
+    })
   })
-})
 
-describe('nx-logger-debug without tty', () => {
-  beforeEach(() => configure({ transport, tty: false }))
-
-  it('should call debug with the given parameters', () => {
-    const inNs = [faker.random.word(), faker.random.word()]
-    const inMsg = faker.random.word()
-    const log = create(...inNs)
-    let called = false
-    setMockHandler(ns => {
-      return (formatter: any, ...args: any[]) => {
-        expect(ns).toEqual(inNs.join(':'))
-        expect(formatter).toEqual(inMsg)
-        called = true
-      }
+  describe('nx-logger-debug without tty', () => {
+    it('should call debug with the given parameters', () => {
+      expect(sendMessageWithSettings({ tty: false })).toBeFalsy()
     })
-    log(inMsg)
-    expect(called).toBeFalsy()
   })
 })
