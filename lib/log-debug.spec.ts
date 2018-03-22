@@ -32,15 +32,11 @@ describe('nx-logger-debug', () => {
     return called
   }
 
-  describe('nx-logger-debug with tty', () => {
-    it('should call debug with the given parameters', () => {
-      expect(sendMessageWithSettings({ tty: true })).toBeTruthy()
-    })
+  it('should call debug', () => {
+    expect(sendMessageWithSettings({ tty: true })).toBeTruthy()
   })
 
-  describe('nx-logger-debug without tty', () => {
-    it('should call debug with the given parameters', () => {
-      expect(sendMessageWithSettings({ tty: false })).toBeFalsy()
-    })
+  it('should not call debug without a tty', () => {
+    expect(sendMessageWithSettings({ tty: false })).toBeFalsy()
   })
 })
