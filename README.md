@@ -6,6 +6,7 @@
 [![tested with jest][jest-badge]][jest]
 [![Coverage Status](https://coveralls.io/repos/github/raynode/nx-logger-debug/badge.svg?branch=master)](https://coveralls.io/github/raynode/nx-logger-debug?branch=master)
 [![npm version](https://badge.fury.io/js/%40raynode%2Fnx-logger-debug.svg)](https://badge.fury.io/js/%40raynode%2Fnx-logger-debug)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2f9c0e3cbb7f8d721b57/maintainability)](https://codeclimate.com/github/raynode/nx-logger-debug/maintainability)
 
 # nx-logger-debug
 
