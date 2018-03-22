@@ -2,9 +2,11 @@ language: node_js
 cache:
   directories:
     - node_modules
+    - ~/.npm
 notifications:
   email: travisci+nx-logger-debug@raynode.de
 node_js:
+  - '9'
   - '8'
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
