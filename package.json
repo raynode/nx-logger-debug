@@ -4,7 +4,7 @@
     "debug": "^3.1.0"
   },
   "peerDependencies": {
-    "@raynode/nx-logger": ">=1.1.2"
+    "@raynode/nx-logger": ">=3.1.0"
   },
   "description": "",
   "devDependencies": {
