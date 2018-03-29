@@ -30,7 +30,8 @@
   ],
   "keywords": [
     "logging",
-    "meta-logging"
+    "meta-logging",
+    "debug"
   ],
   "license": "MIT",
   "main": "dist/log-debug.js",
