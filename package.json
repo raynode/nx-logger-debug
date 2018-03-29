@@ -30,7 +30,8 @@
   ],
   "keywords": [
     "logging",
-    "meta-logging"
+    "meta-logging",
+    "debug"
   ],
   "license": "MIT",
   "main": "dist/log-debug.js",
@@ -57,7 +58,7 @@
   "types": "dist/log-debug.d.ts",
   "version": "0.0.0-development",
   "optionalDependencies": {
-    "@raynode/nx-logger": "^3.1.0"
+    "@raynode/nx-logger": "^4.0.0"
   },
   "config": {
     "commitizen": {
