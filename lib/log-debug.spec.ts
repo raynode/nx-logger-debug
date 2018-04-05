@@ -1,7 +1,12 @@
 
 // tslint:disable-next-line
 import * as faker from 'faker'
-import { configure, create, Config } from '@raynode/nx-logger'
+// tslint:disable-next-line
+import {
+  Config,
+  configure,
+  create,
+} from '@raynode/nx-logger'
 
 import * as debug from './__mocks__/debug'
 import { transport } from './log-debug'
