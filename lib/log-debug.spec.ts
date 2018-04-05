@@ -1,7 +1,7 @@
 
+// tslint:disable-next-line
 import * as faker from 'faker'
-
-import { configure, create, nxLogger } from '@raynode/nx-logger'
+import { configure, create, Config } from '@raynode/nx-logger'
 
 import * as debug from './__mocks__/debug'
 import { transport } from './log-debug'
@@ -12,7 +12,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 50
 
 describe('nx-logger-debug', () => {
   const sendMessageWithSettings = (
-    loggerOptions: Partial<nxLogger.Config>,
+    loggerOptions: Partial<Config>,
     message = faker.random.word(),
     namespace = [faker.random.word(), faker.random.word()],
   ) => {
