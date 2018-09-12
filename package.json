@@ -1,7 +1,7 @@
 {
   "author": "Tobias Kopelke <nox@raynode.de>",
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "^4.0.1"
   },
   "peerDependencies": {
     "@raynode/nx-logger": ">=3.1.0"
