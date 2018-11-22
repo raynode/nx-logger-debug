@@ -26,12 +26,10 @@ describe('nx-logger-debug', () => {
     const inMsg = faker.random.word()
     const log = create(...namespace)
     let called = false
-    setMockHandler(ns => {
-      return (formatter: any, ...args: any[]) => {
-        expect(ns).toEqual(namespace.join(':'))
-        expect(formatter).toEqual(message)
-        called = true
-      }
+    setMockHandler((ns: string) => (formatter: any, ...args: any[]) => {
+      expect(ns).toEqual(namespace.join(':'))
+      expect(formatter).toEqual(message)
+      called = true
     })
     log(message)
     return called
