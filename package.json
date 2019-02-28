@@ -10,7 +10,7 @@
   "devDependencies": {
     "@types/debug": "4.1.2",
     "@types/faker": "^4.1.4",
-    "@types/jest": "^23.3.9",
+    "@types/jest": "^24.0.9",
     "@types/node": "^11.9.5",
     "codecov": "^3.1.0",
     "commitizen": "^3.0.4",
